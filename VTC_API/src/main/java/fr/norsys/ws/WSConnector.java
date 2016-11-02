@@ -10,12 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient("http://localhost:9000")
 public interface WSConnector {
 
-	@RequestMapping(method = RequestMethod.GET, value = "/version")
-    String version();
-	
-	@RequestMapping(method = RequestMethod.GET, value = "/hello")
-	String hello(@RequestParam("name") String name);
-
 	@RequestMapping(method = RequestMethod.GET, value = "/exploitantVTC")
 	Exploitant getExploitant();
 

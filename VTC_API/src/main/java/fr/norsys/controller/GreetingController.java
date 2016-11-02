@@ -14,16 +14,6 @@ public class GreetingController {
     
 	@Autowired
 	public WSConnector service;
-	
-	@RequestMapping(value = "/version", method = RequestMethod.GET)
-    public String getVersion(){
-    	return service.version();
-    }
-	
-	@RequestMapping(value = "/hello", method = RequestMethod.GET)
-	public String hello(@RequestParam(value="name") String name) {
-        return service.hello(name);
-    }
 
     @RequestMapping(value = "/exploitantVTC", method = RequestMethod.GET)
 	public Exploitant getExploitant(){
